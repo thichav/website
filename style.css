@@ -2,21 +2,74 @@
 
 body {
   color: black;
+  background-color: white;
   font-size: 1em;
   font-family: 'Calibri', 'Verdana', sans-serif;
-  margin: 0;
 }
 
 header {
-  background-color: #bdc3c7;
+  background-color: #1F70F2;
   text-align: center;
-  font-size: 2em;
-  height: 4em;
+  color: white;
+  font-size: 3em;
+  height: 2em;
+  border: 0.1em white solid;
+  /* bordure */
+  margin-bottom: 0.5em;
+  /* marge bas */
 }
 
-p {
-  color: blue;
-  /* tous les paragraphes sont en bleu */
+nav {
+  display: inline-block;
+  vertical-align: top;
+  /* float : left; permet un positionnement flotant */
+  background-color: #59A0F2;
+  text-align: left;
+  color: white;
+  height: 30em;
+  width: 10em;
+  border: 0.25em white solid;
+  /* bordure */
+  border-right-width: 0em;
+  /* épaisseur bordure de droite */
+  border-bottom-width: 0em;
+  /* épaisseur bordure de droite */
+  box-shadow: 5px 5px 0px grey;
+  /* ombrage */
+}
+
+article {
+  background-color: white;
+  color: black;
+  height: 7em;
+  width: 60em;
+  border: 0.05em #59A0F2 solid;
+  /* bordure */
+  border-radius: 0.5em;
+  /* bordure arrondie */
+  margin-top: 0.5em;
+  /* marge du haut */
+  margin-left: 1em;
+  /* marge gauche */
+}
+
+article p {
+  color: brown;
+}
+
+#page {
+  display: inline-block;
+  vertical-align: top;
+  /* 
+  display: flex;
+  flex-direction: column;  /* axe princ */
+  /* flex-wrap: wrap; /* on revient à la ligne si plus d'espace */
+  /* justify-content: flex-end; /* alignement axe princ */
+}
+
+ul.liensnav {
+  list-style-type: none;
+  /* supprime les points pour les listes */
 }
 
 h1 {
@@ -24,11 +77,6 @@ h1 {
   /* tous les titres h1 et tous les textes important sont en rouge */
   text-align: center;
 }
-
-article p {
-  color: brown
-}
-
 
 /*
 ImageActu {

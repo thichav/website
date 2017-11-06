@@ -1,0 +1,49 @@
+/*--- fichier style.css avec sélecteur css : ordre important => surcharge ligne prec ---*/
+
+body {
+  color: green;
+  font-size: 1em;
+  font-family: 'Calibri', 'Verdana', sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: blue;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  height: 2em;
+}
+
+nav {
+  background-color: #2980b9;
+  text-align: center;
+  color: white;
+  height: 10em;
+  width: 10em;
+}
+
+liens nav {
+  color: white;
+  text-align: left;
+}
+
+article {
+  background-color: white;
+  color: black;
+  border: ridge;
+}
+p {
+  color: blue;
+  /* tous les paragraphes sont en bleu */
+}
+
+h1 {
+  color: #34495e;
+  /* tous les titres h1 et tous les textes important sont en rouge */
+  text-align: center;
+}
+
+article p {
+  color: brown
+}

@@ -1,51 +1,109 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+  <meta charset="utf-8" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <!-- entete -->
-  <header>
-    <h1>Code Academy</h1>
+  <header class="entete">
+    Code Academie
   </header>
   <!-- navigation : liens de navigation (à mettre en premier) -->
   <nav>
     <h2>Menu</h2>
-    <ul>
+    <ul class="liensnav">
       <li><a href="index.html">Actualite</a></li>
+      <!-- lien hypertexte -->
       <li><a href="tableau.html">Tableau</a></li>
       <li><a href="https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/structurer-sa-page">OpenClassroom</a></li>
     </ul>
   </nav>
   <!-- section actu -->
-  <section>
-    <h2>Actu</h2>
-    <ul>
-      <!-- article : portion autonome de la page ex : actu, infos d'autre site -->
-      <article>
-        <li><img src="Openclassrroms.PNG" alt="Openclassrroms" title="info bulle" height="60" width="60" /> Cours en lignes</li>
-      </article>
-      <article>
-        <li><img src="W3schhools.PNG" alt="W3schhools" title="info bulle" height="60" width="200" /> Guide de référence sur divers langages informatiques dont HTML CSSe</li>
-      </article>
-      <article>
-        <li><img src="Github.PNG" alt="Github" title="info bulle" height="60" width="60" /> outil de travail collaboratif (=SVN)</li>
-      </article>
-      <article>
-        <li><img src="Codeanywhere.PNG" alt="Codeanywhere" title="info bulle" height="60" width="200" /> EDI : editeur tous langages</li>
-      </article>
-      <article>
-        <li><img src="Flatuicolor.PNG" alt="Flatuicolor" title="info bulle" height="60" width="60" /> Palette de couleur à la mode</li>
-      </article>
-    </ul>
+  <section id="page">
+    <article class="element">
+      <table border=0>
+        <!-- ligne 1 avec fusion col1 de la ligne 1 et 2 -->
+        <tr>
+          <td rowspan="2"><img src="W3schhools.PNG" alt="W3schhools" title="info bulle" height="90" width="200" /></td>
+          <td>
+            Titre 1er article
+          </td>
+        </tr>
+        <!-- ligne + 2 col -->
+        <tr>
+          <td>
+            <p> Guide de référence sur divers langages informatiques dont HTML
+            </p>
+          </td>
+        </tr>
+      </table>
+    </article>
+    <article class="element">
+      <table border=0>
+        <!-- ligne 1 avec fusion col1 de la ligne 1 et 2 -->
+        <tr>
+          <td rowspan="2"><img src="Github.PNG" alt="Github" title="info bulle" height="90" width="200" /></td>
+          <td>
+           Titre 2eme article
+          </td>
+        </tr>
+        <!-- ligne 2 col 2 -->
+        <tr>
+          <td>
+            <p>outil de travail collaboratif (=SVN)
+            </p>
+          </td>
+        </tr>
+      </table>
+    </article>
+    <article class="element">
+      <table border=0>
+        <!-- ligne 1 avec fusion col1 de la ligne 1 et 2 -->
+        <tr>
+          <td rowspan="2"><img img src="Codeanywhere.PNG" alt="Codeanywhere" title="info bulle" height="90" width="200" /></td>
+          <td>
+            Titre 3eme article
+          </td>
+        </tr>
+        <!-- ligne 2 col 2 -->
+        <tr>
+          <td>
+            <p>EDI : editeur tous langagesL
+            </p>
+          </td>
+        </tr>
+      </table>
+    </article>
+    <article class="element">
+      <table border=0>
+        <!-- ligne 1 avec fusion col1 de la ligne 1 et 2 -->
+        <tr>
+          <td rowspan="2"><img src="Flatuicolor.PNG" alt="Flatuicolor" title="info bulle" height="90" width="200" /></td>
+          <td>
+            Titre 4eme article
+          </td>
+        </tr>
+        <!-- ligne 2 col 2 -->
+        <tr>
+          <td>
+            <p> Palette de couleur flat
+            </p>
+          </td>
+        </tr>
+      </table>
+    </article>
   </section>
+
   <!-- aside : info complémentaires -->
   <aside>
   </aside>
   <!-- pied -->
   <footer>
   </footer>
+
 </body>
 
 </html>
