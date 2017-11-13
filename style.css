@@ -4,7 +4,7 @@ body {
   color: black;
   background-color: white;
   font-size: 1em;
-  font-family: 'Calibri', 'Verdana', sans-serif;
+  font-family: 'Calibri', sans-serif;
 }
 
 header {
@@ -12,10 +12,10 @@ header {
   text-align: center;
   color: white;
   font-size: 3em;
-  height: 2em;
+  height: 1.5em;
   border: 0.1em white solid;
   /* bordure */
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
   /* marge bas */
 }
 
@@ -28,43 +28,47 @@ nav {
   color: white;
   height: 40em;
   width: 10em;
-  border: 0.25em white solid;
   /* bordure */
+  border: 0.25em white solid;
+  /* épaisseur bordure de droite */
   border-right-width: 0em;
   /* épaisseur bordure de droite */
   border-bottom-width: 0em;
-  /* épaisseur bordure de droite */
-  box-shadow: 5px 5px 0px grey;
   /* ombrage */
+  box-shadow: 5px 5px 0px grey;
 }
 
 /* application du type d'élement html à "section" */
+
 article {
   background-color: white;
   color: black;
   height: 7em;
   width: 60em;
-  border: 0.05em #59A0F2 solid;
   /* bordure */
-  border-radius: 0.5em;
+  border: 0.1em #59A0F2 solid;
   /* bordure arrondie */
-  margin-top: 0.5em;
+  border-radius: 0.5em;
   /* marge du haut */
-  margin-left: 1em;
+  margin-top: 0.5em;
   /* marge gauche */
+  margin-left: 1em;
 }
 
 /* application du style à emboîtement de <p> dans <article> */
+
 article p {
   color: brown;
 }
 
 /* application du style à ".classe" */
+
 .entete {
-  color:gold;
+  color: gold;
 }
 
 /* application du style à "#id" */
+
 #page {
   display: inline-block;
   vertical-align: top;
@@ -81,21 +85,25 @@ ul.liensnav {
 }
 
 #image_article {
+  /* mode flotant en commençant par la gauche */
+  float: left;
   /* padding: 5px 50px 75px 100px; */
-  padding-top: 10px;
-  padding-left: 10px;
+  padding-top: 1%;
+  padding-left: 1%;
 }
 
 #titre_article {
-  padding-top: 10px;
-  padding-left: 220px;
-  color: orange;
+  float: left;
+  /* on fixe n% de la largeur du bloc afin de permettre au contenu article de passer en dessous */
+  width: 70%;
+  /* marge intérieure */
+  padding-top: 1%;
+  color: blue;
 }
 
 #contenu_article {
-  padding-top: -5px;
-  padding-left: 220px;
-  color: green;
+  float: left;
+  color: black;
 }
 
 h1 {
