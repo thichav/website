@@ -26,7 +26,7 @@ nav {
   background-color: #59A0F2;
   text-align: left;
   color: white;
-  height: 30em;
+  height: 40em;
   width: 10em;
   border: 0.25em white solid;
   /* bordure */
@@ -38,6 +38,7 @@ nav {
   /* ombrage */
 }
 
+/* application du type d'élement html à "section" */
 article {
   background-color: white;
   color: black;
@@ -53,10 +54,17 @@ article {
   /* marge gauche */
 }
 
+/* application du style à emboîtement de <p> dans <article> */
 article p {
   color: brown;
 }
 
+/* application du style à ".classe" */
+.entete {
+  color:gold;
+}
+
+/* application du style à "#id" */
 #page {
   display: inline-block;
   vertical-align: top;
@@ -69,7 +77,25 @@ article p {
 
 ul.liensnav {
   list-style-type: none;
-  /* supprime les points pour les listes */
+  /* supprime les puces pour les listes */
+}
+
+#image_article {
+  /* padding: 5px 50px 75px 100px; */
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#titre_article {
+  padding-top: 10px;
+  padding-left: 220px;
+  color: orange;
+}
+
+#contenu_article {
+  padding-top: -5px;
+  padding-left: 220px;
+  color: green;
 }
 
 h1 {
