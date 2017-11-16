@@ -38,12 +38,16 @@ nav {
   box-shadow: 5px 5px 0px grey;
 }
 
+nav h2 {
+  text-align: center;
+}
+
 /* application du type d'élement html à "section" */
 
 article {
   background-color: white;
   color: black;
-  height: 7em;
+  height: 5.5em;
   width: 60em;
   /* bordure */
   border: 0.1em #59A0F2 solid;
@@ -58,7 +62,7 @@ article {
 /* application du style à emboîtement de <p> dans <article> */
 
 article p {
-  color: brown;
+  color: black;
 }
 
 /* application du style à ".classe" */
@@ -80,29 +84,35 @@ article p {
 }
 
 ul.liensnav {
-  list-style-type: none;
   /* supprime les puces pour les listes */
+  list-style-type: none;  
 }
 
 #image_article {
   /* mode flotant en commençant par la gauche */
   float: left;
-  /* padding: 5px 50px 75px 100px; */
+  /* marge interieur du bloc */
   padding-top: 1%;
   padding-left: 1%;
+  /* padding: 5px 50px 75px 100px; */
 }
 
 #titre_article {
+  /* mode flotant en commençant par la gauche */
   float: left;
   /* on fixe n% de la largeur du bloc afin de permettre au contenu article de passer en dessous */
   width: 70%;
-  /* marge intérieure */
+  /* marge intérieure du bloc */
   padding-top: 1%;
+  padding-left: 1%;
   color: blue;
 }
 
 #contenu_article {
+  /* mode flotant en commençant par la gauche */
   float: left;
+  /* marge intérieure du bloc */
+  padding-left: 1%;
   color: black;
 }
 
