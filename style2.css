@@ -1,49 +1,126 @@
 /*--- fichier style.css avec sélecteur css : ordre important => surcharge ligne prec ---*/
+/*--- sauvegarde avec display inline-block --- */
 
 body {
-  color: green;
+  color: black;
+  background-color: white;
   font-size: 1em;
-  font-family: 'Calibri', 'Verdana', sans-serif;
-  margin: 0;
+  font-family: 'Calibri', sans-serif;
 }
 
 header {
-  background-color: blue;
+  background-color: #1F70F2;
   text-align: center;
   color: white;
   font-size: 3em;
-  height: 2em;
+  height: 1.5em;
+  border: 0.1em white solid;
+  /* bordure */
+  margin-bottom: 0.2em;
+  /* marge bas */
 }
 
 nav {
-  background-color: #2980b9;
-  text-align: center;
+  /* positionnement en ligne et alignement en haut */
+  display: inline-block;
+  vertical-align: top;
+  /* float : left; permet un positionnement flotant */
+  background-color: #59A0F2;
+  text-align: left;
   color: white;
-  height: 10em;
+  height: 40em;
   width: 10em;
+  /* bordure */
+  border: 0.25em white solid;
+  /* épaisseur bordure de droite */
+  border-right-width: 0em;
+  /* épaisseur bordure de droite */
+  border-bottom-width: 0em;
+  /* ombrage */
+  box-shadow: 5px 5px 0px grey;
 }
 
-liens nav {
-  color: white;
-  text-align: left;
+nav h2 {
+  text-align: center;
 }
+
+/* application du type d'élement html à "section" */
 
 article {
   background-color: white;
   color: black;
-  border: ridge;
+  height: 5.5em;
+  width: 60em;
+  /* bordure */
+  border: 0.1em #59A0F2 solid;
+  /* bordure arrondie */
+  border-radius: 0.5em;
+  /* marge du haut */
+  margin-top: 0.5em;
+  /* marge gauche */
+  margin-left: 1em;
 }
-p {
+
+/* application du style à emboîtement de <p> dans <article> */
+
+article p {
+  color: black;
+}
+
+/* application du style à ".classe" */
+
+.entete {
+  color: gold;
+}
+
+/* application du style à "#id" */
+
+#page {
+  /* positionnement en ligne et alignement en haut */
+  display: inline-block;
+  vertical-align: top;
+  /* 
+  display: flex;
+  flex-direction: column;  /* axe princ */
+  /* flex-wrap: wrap; /* on revient à la ligne si plus d'espace */
+  /* justify-content: flex-end; /* alignement axe princ */
+}
+
+ul.liensnav {
+  /* supprime les puces pour les listes */
+  list-style-type: none;  
+}
+
+#image_article {
+  /* mode flotant en commençant par la gauche */
+  float: left;
+  /* marge interieur du bloc */
+  padding-top: 1%;
+  padding-left: 1%;
+  /* padding: 5px 50px 75px 100px; */
+}
+
+#titre_article {
+  /* mode flotant en commençant par la gauche */
+  float: left;
+  /* on fixe n% de la largeur du bloc afin de permettre au contenu article de passer en dessous */
+  width: 70%;
+  /* marge intérieure du bloc */
+  padding-top: 1%;
+  padding-left: 1%;
   color: blue;
-  /* tous les paragraphes sont en bleu */
+}
+
+#contenu_article {
+  /* mode flotant en commençant par la gauche */
+  float: left;
+  /* marge intérieure du bloc */
+  padding-left: 1%;
+  color: black;
 }
 
 h1 {
   color: #34495e;
   /* tous les titres h1 et tous les textes important sont en rouge */
   text-align: center;
-}
-
-article p {
-  color: brown
 }

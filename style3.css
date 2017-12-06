@@ -1,3 +1,4 @@
+/*--- sauvegarde avec utilisation float et image/video fixe ---*/ 
 /*--- fichier style.css avec sélecteur css : ordre important => surcharge ligne prec ---*/
 
 Html body {
@@ -28,22 +29,18 @@ header {
   /* marge bas */
 }
 
-#conteneur {
-  /* utilisation de la flexbox sur le conteneur "conteneur" */
-  display: flex;
-  flex-direction: row;  /* axe princ */
-}
-
-
 nav {
+  /* positionnement */
+   float: left; 
+/*  vertical-align: top; */
+  /* float : left; permet un positionnement flotant */
   background-color: #59A0F2;
   text-align: left;
   color: white;
   /* hauteur du nav */
-  height: 40em;
-  /* largeur du nav => on enleve width car on utilise flex */
-  /*width: 12%;*/
-  flex: 2;
+ /* height: 40em; */
+  /* largeur du nav */
+  width: 22%;
   /* bordure */
   border: 0.25em white solid;
   /* épaisseur bordure de droite */
@@ -58,41 +55,21 @@ nav h2 {
   text-align: center;
 }
 
-ul.liensnav {
-  /* supprime les puces pour les listes */
-  list-style-type: none;  
-}
-
 section img, section video {
    /* largeur n% de la taille du pere */
    width: 120px;
    /* hauteur auto : garde la cohérence en fontion de la largeur */
-   height: auto;
-    /* hauteur  : max pour ne pas dépasser la hauteur du cadre "article" */
-   max-height: 5.5em;
+   height: 70px;
 }
 
-#page {
-  /* utilisation de la flexbox sur le conteneur "page" */
-  display: flex;
-  flex-direction: column;  /* axe princ */
-  flex: 8;
-  /* flex-wrap: wrap; /* on revient à la ligne si plus d'espace */
-  /* justify-content: flex-end; /* alignement axe princ */
-}
 
 /* application du type d'élement html à "section" */
 
 article {
-   /* utilisation de la flexbox sur le conteneur "article" */
-  display: flex;
-  flex-direction: row;
-  /* */
   background-color: white;
   color: black;
-  height: 7em;
-  /* largeur du nav par rapport au parent*/
-  width: 100%;
+  height: 5.5em;
+  width: 60em;
   /* bordure */
   border: 0.1em #59A0F2 solid;
   /* bordure arrondie */
@@ -104,17 +81,39 @@ article {
 }
 
 /* application du style à emboîtement de <p> dans <article> */
+
 article p {
   color: black;
 }
 
 /* application du style à ".classe" */
+
 .entete {
   color: gold;
 }
 
 /* application du style à "#id" */
+
+#page {
+  margin-left:22%;
+  /* positionnement */
+/*  float: left; */
+/*  vertical-align: top; */
+  /* 
+  display: flex;
+  flex-direction: column;  /* axe princ */
+  /* flex-wrap: wrap; /* on revient à la ligne si plus d'espace */
+  /* justify-content: flex-end; /* alignement axe princ */
+}
+
+ul.liensnav {
+  /* supprime les puces pour les listes */
+  list-style-type: none;  
+}
+
 #image_article {
+  /* mode flotant en commençant par la gauche */
+/*  float: left; */
   /* marge interieur du bloc */
   padding-top: 1%;
   padding-left: 1%;
@@ -122,6 +121,10 @@ article p {
 }
 
 #titre_article {
+  /* mode flotant en commençant par la gauche */
+/*  float: left; */
+  /* on fixe n% de la largeur du bloc afin de permettre au contenu article de passer en dessous */
+  width: 70%;
   /* marge intérieure du bloc */
   padding-top: 1%;
   padding-left: 1%;
@@ -129,6 +132,8 @@ article p {
 }
 
 #contenu_article {
+  /* mode flotant en commençant par la gauche */
+/*  float: left; */
   /* marge intérieure du bloc */
   padding-left: 1%;
   color: black;
