@@ -6,26 +6,26 @@ Html body {
 }
 
 body {
-  color: black;
-  background-color: white;
+  background-color: lightblue; /* couleur de fond de la page (astuce : c'est celle du menu) */
   font-size: 1em;
   font-family: 'Calibri', sans-serif;
-  margin : 0;
+  margin : 0; /* pas de marge */
 }
 
 header {
   /* couleur de fond de page */
-  background-color: #1F70F2;
+  background-color: rgb(52, 152, 219);
   /* allignement du texte */
   text-align: center;
   /* couleur du texte */
   color: white;
-  font-size: 3em;
-  height: 1.5em;
-  border: 0.1em white solid;
-  /* bordure */
-  margin-bottom: 0.2em;
-  /* marge bas */
+  padding: 1em; /* marge intérieur du titre */ 
+/*  border: 0.1em white solid;   /* bordure */
+/*  margin-bottom: 0.2em; /* marge bas */
+}
+
+header h1 {
+  color: gold;
 }
 
 #conteneur {
@@ -36,7 +36,8 @@ header {
 
 
 nav {
-  background-color: #59A0F2;
+/*  background-color: #59A0F2; */
+  background-color: lightblue;
   text-align: left;
   color: white;
   /* hauteur du nav */
@@ -45,7 +46,7 @@ nav {
   /*width: 12%;*/
   flex: 2;
   /* bordure */
-  border: 0.25em white solid;
+  border: 0.25em lightblue solid;
   /* épaisseur bordure de droite */
   border-right-width: 0em;
   /* épaisseur bordure de droite */
@@ -70,9 +71,11 @@ section img, section video {
    height: auto;
     /* hauteur  : max pour ne pas dépasser la hauteur du cadre "article" */
    max-height: 5.5em;
+  /* marge à droite et en bas de l'image pour que le texte ne soit pas collée */
+   margin : 1em 1em 1em 1em;
 }
 
-#page {
+section {
   /* utilisation de la flexbox sur le conteneur "page" */
   display: flex;
   flex-direction: column;  /* axe princ */
@@ -108,18 +111,6 @@ article p {
   color: black;
 }
 
-/* application du style à ".classe" */
-.entete {
-  color: gold;
-}
-
-/* application du style à "#id" */
-#image_article {
-  /* marge interieur du bloc */
-  padding-top: 1%;
-  padding-left: 1%;
-  /* padding: 5px 50px 75px 100px; */
-}
 
 #titre_article {
   /* marge intérieure du bloc */
@@ -128,23 +119,9 @@ article p {
   color: blue;
 }
 
-#contenu_article {
+/* application du style à ".classe" */
+.contenu_article {
   /* marge intérieure du bloc */
   padding-left: 1%;
   color: black;
 }
-
-h1 {
-  color: #34495e;
-  /* tous les titres h1 et tous les textes important sont en rouge */
-  text-align: center;
-}
-
-
-
-/*
-ImageActu {
-  height="60";
-  width="60";
-}  
-*/
