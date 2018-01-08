@@ -2,14 +2,21 @@
 
 Html body {
   margin: 0;
-  Height : 100%
+  Height: 100%
 }
 
 body {
-  background-color: lightblue; /* couleur de fond de la page (astuce : c'est celle du menu) */
+  background-color: lightblue;
+  /* couleur de fond de la page (astuce : c'est celle du menu) */
   font-size: 1em;
   font-family: 'Calibri', sans-serif;
-  margin : 0; /* pas de marge */
+   /* pas de marge */
+  margin: 0;
+  /* utilisation de la flexbox sur le conteneur "body" */
+  display: flex;
+  /* pres par defaut */
+  flex-direction: column;
+
 }
 
 header {
@@ -19,32 +26,40 @@ header {
   text-align: center;
   /* couleur du texte */
   color: white;
-  padding: 1em; /* marge intérieur du titre */ 
-/*  border: 0.1em white solid;   /* bordure */
-/*  margin-bottom: 0.2em; /* marge bas */
+  /* marge intérieur du titre */
+  padding: 1em;
+  /*  border: 0.1em white solid;   /* bordure */
+  /*  margin-bottom: 0.2em; /* marge bas */
 }
 
 header h1 {
   color: gold;
 }
 
-#conteneur {
-  /* utilisation de la flexbox sur le conteneur "conteneur" */
+/* id conteneur_princ : unique */
+#conteneur_princ {
+  /* utilisation de la flexbox 0 sur le conteneur "conteneur" */
   display: flex;
-  flex-direction: row;  /* axe princ */
+  /* pres par defaut "ligne" */
+  flex-direction: row;
 }
 
-
-nav {
-/*  background-color: #59A0F2; */
+/* nav directement enfant du conteneur */
+#conteneur_princ > nav {
+  /* permet de garantir que le menu est en premiere position */
+  order : -1;
+  /* poids grandeur */
+  flex-grow: 2;
+  /* taille fixe de 10% de la taille de la fenêtre "Viewport" */
+  /* flex: 0 0 10vw; */
+  /*  background-color: #59A0F2; */
   background-color: lightblue;
   text-align: left;
   color: white;
-  /* hauteur du nav */
+  /* hauteur du nav => on enlève car on utilise du flex */
   height: 40em;
   /* largeur du nav => on enleve width car on utilise flex */
   /*width: 12%;*/
-  flex: 2;
   /* bordure */
   border: 0.25em lightblue solid;
   /* épaisseur bordure de droite */
@@ -61,41 +76,43 @@ nav h2 {
 
 ul.liensnav {
   /* supprime les puces pour les listes */
-  list-style-type: none;  
+  list-style-type: none;
 }
 
-section img, section video {
-   /* largeur n% de la taille du pere */
-   width: 120px;
-   /* hauteur auto : garde la cohérence en fontion de la largeur */
-   height: auto;
-    /* hauteur  : max pour ne pas dépasser la hauteur du cadre "article" */
-   max-height: 5.5em;
+/* section img ou section video */
+#conteneur_princ > section img,
+#conteneur_princ > section video {
+  /* largeur n% de la taille du pere */
+  width: 30%;
+  /*width: 120px;*/
+  border: solid 1px red;
+  /* hauteur auto : garde la cohérence en fontion de la largeur */
+  height: auto;
+  /* hauteur  : max pour ne pas dépasser la hauteur du cadre "article" */
+  max-height: 5.5em;
   /* marge à droite et en bas de l'image pour que le texte ne soit pas collée */
-   margin : 1em 1em 1em 1em;
+  margin: 1em 1em 1em 1em;
 }
 
-section {
+#conteneur_princ > section {
   /* utilisation de la flexbox sur le conteneur "page" */
   display: flex;
-  flex-direction: column;  /* axe princ */
-  flex: 8;
+  flex-direction: column;
+  /* axe princ */
+  flex-grow: 8;
   /* flex-wrap: wrap; /* on revient à la ligne si plus d'espace */
   /* justify-content: flex-end; /* alignement axe princ */
 }
 
 /* application du type d'élement html à "section" */
-
-article {
-   /* utilisation de la flexbox sur le conteneur "article" */
+#conteneur_princ > section article {
+  /* utilisation de la flexbox sur le conteneur "article" */
   display: flex;
   flex-direction: row;
   /* */
   background-color: white;
   color: black;
   height: 7em;
-  /* largeur du nav par rapport au parent*/
-  width: 100%;
   /* bordure */
   border: 0.1em #59A0F2 solid;
   /* bordure arrondie */
@@ -107,12 +124,13 @@ article {
 }
 
 /* application du style à emboîtement de <p> dans <article> */
+
 article p {
   color: black;
 }
 
-
-#titre_article {
+/* class titre_article itérée n fois */
+.titre_article {
   /* marge intérieure du bloc */
   padding-top: 1%;
   padding-left: 1%;
@@ -120,6 +138,7 @@ article p {
 }
 
 /* application du style à ".classe" */
+
 .contenu_article {
   /* marge intérieure du bloc */
   padding-left: 1%;
