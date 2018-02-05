@@ -10,13 +10,12 @@ body {
   /* couleur de fond de la page (astuce : c'est celle du menu) */
   font-size: 1em;
   font-family: 'Calibri', sans-serif;
-   /* pas de marge */
+  /* pas de marge */
   margin: 0;
   /* utilisation de la flexbox sur le conteneur "body" */
   display: flex;
   /* pres par defaut */
   flex-direction: column;
-
 }
 
 header {
@@ -37,6 +36,7 @@ header h1 {
 }
 
 /* id conteneur_princ : unique */
+
 #conteneur_princ {
   /* utilisation de la flexbox 0 sur le conteneur "conteneur" */
   display: flex;
@@ -45,9 +45,10 @@ header h1 {
 }
 
 /* nav directement enfant du conteneur */
-#conteneur_princ > nav {
+
+#conteneur_princ>nav {
   /* permet de garantir que le menu est en premiere position */
-  order : -1;
+  order: -1;
   /* poids grandeur */
   flex-grow: 2;
   /* taille fixe de 10% de la taille de la fenêtre "Viewport" */
@@ -80,8 +81,9 @@ ul.liensnav {
 }
 
 /* section img ou section video */
-#conteneur_princ > section img,
-#conteneur_princ > section video {
+
+#conteneur_princ>section img,
+#conteneur_princ>section video {
   /* largeur n% de la taille du pere */
   width: 30%;
   /*width: 120px;*/
@@ -94,7 +96,7 @@ ul.liensnav {
   margin: 1em 1em 1em 1em;
 }
 
-#conteneur_princ > section {
+#conteneur_princ>section {
   /* utilisation de la flexbox sur le conteneur "page" */
   display: flex;
   flex-direction: column;
@@ -105,7 +107,8 @@ ul.liensnav {
 }
 
 /* application du type d'élement html à "section" */
-#conteneur_princ > section article {
+
+#conteneur_princ>section article {
   /* utilisation de la flexbox sur le conteneur "article" */
   display: flex;
   flex-direction: row;
@@ -130,6 +133,7 @@ article p {
 }
 
 /* class titre_article itérée n fois */
+
 .titre_article {
   /* marge intérieure du bloc */
   padding-top: 1%;
@@ -144,3 +148,29 @@ article p {
   padding-left: 1%;
   color: black;
 }
+
+/* application du style au formulaire de type "tel" */
+
+input[ type="tel"], input[ type="url"]{
+  color: red;
+}
+
+/* application du style au formulaire de type "text" et obligatoire */
+
+input[ type="text"], [required] {
+  border: solid 1px lightblue;
+  color: orange;
+  background:  lightgreen;
+}
+
+label::after {
+  content : " ==";
+  display : inline;
+}
+
+/*
+.class input[ type="url"] {
+{
+  color: green;
+}
+*/  
